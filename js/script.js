@@ -79,7 +79,7 @@ function filterList(list, value) {
    return filteredList;
 }
 
-
+/*search function to search through student data*/
 
 function searchStudent(){
 
@@ -93,6 +93,7 @@ function searchStudent(){
    header.insertAdjacentHTML('beforeend', html);
 
    const searchBar = document.getElementById('search');
+   const button = document.querySelector('button');
 
    // For keyup event
    searchBar.addEventListener('keyup', (e) => {
@@ -109,14 +110,16 @@ function searchStudent(){
       addPagination(filteredList);
 
        if(filteredList==""){
-         const html=`<h1 style="font-size:50px">
+         const html=`<h1 style="font-size:40px">
           Sorry no results found &#128556;
-                    <h1>`
-      
+                    <h1>
+                    <i style="font-size:30px">Refresh page....</i>`;
+
          const header = document.querySelector('header');
          header.insertAdjacentHTML('afterend', html); 
-         
-   } 
+       searchBar.disabled=true;
+       button.disabled=true;
+   }
     
    });
 
