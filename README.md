@@ -1,2 +1,2 @@
 # project-2-fullstack
- my second fullstack project
+ Student Canvas with a group of student profiles
